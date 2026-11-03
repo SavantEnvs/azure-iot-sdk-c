@@ -1,0 +1,9 @@
+project: savantenvs/azure-iot-sdk-c
+target: iothubclient_fuzz_amqp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/iothubclient_fuzz_amqp/testsuite
+cmds:
+  - cmd: /mayhem/iothubclient_fuzz_amqp
+    libfuzzer: true
+    timeout: 10
